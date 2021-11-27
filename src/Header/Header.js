@@ -12,7 +12,7 @@ import SupervisedUserCircleIcon from "@mui/icons-material/SupervisedUserCircle";
 import Avatar from "@mui/material/Avatar";
 import IconButton from "@mui/material/IconButton";
 import React from "react";
-import "./header.css";
+import "./header.scss";
 
 function Header() {
   return (
@@ -23,12 +23,11 @@ function Header() {
           alt=""
         />
         <div className="header__input">
-          <SearchIcon>
-            <input type="text" />
-          </SearchIcon>
+          <SearchIcon></SearchIcon>
+          <input type="text" />
         </div>
       </div>
-      <div className="header__right">
+      <div className="header__middle">
         <div className="header__option">
           <HomeIcon fontSize="large" />
         </div>
@@ -50,7 +49,7 @@ function Header() {
         </div>
       </div>
       <div className="header__right">
-        <div className="header__info">
+        <div className="header__right__info">
           <Avatar />
           <h4>Anurag Arwalkar</h4>
         </div>
