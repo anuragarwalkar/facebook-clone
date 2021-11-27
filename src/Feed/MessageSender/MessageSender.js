@@ -11,6 +11,15 @@ function MessageSender({ userName = "Anurag Arwalkar" }) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+
+    // TODO: db calls
+
+    resetInputs();
+  };
+
+  const resetInputs = () => {
+    setInput("");
+    setImgUrl("");
   };
 
   const setValue = (callbackFn, e) => callbackFn(e.target.value);
