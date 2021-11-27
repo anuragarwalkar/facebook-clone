@@ -1,3 +1,5 @@
+@import "../scss/mixins.scss";
+
 .header {
   padding: 15px 20px;
   display: flex;
@@ -44,6 +46,12 @@
       .MuiSvgIcon-root {
         color: grey;
       }
+
+      &--active {
+        .MuiSvgIcon-root {
+          @include bg-color;
+        }
+      }
     }
 
     &__option:hover {
@@ -52,7 +60,7 @@
       border-bottom: none;
 
       .MuiSvgIcon-root {
-        color: #2e81f4;
+        @include bg-color;
       }
     }
   }
