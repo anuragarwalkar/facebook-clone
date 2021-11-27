@@ -1,10 +1,10 @@
 import { Fragment } from "react";
 import "./App.scss";
-import Header from "./Header/Header";
+import Header from "./components/Header/Header";
 import HomeScreen from "./screen/HomeScreen";
 
 function App() {
-  const user = null;
+  const user = "aarwalka";
   return (
     <div className="app">
       {!user ? (
