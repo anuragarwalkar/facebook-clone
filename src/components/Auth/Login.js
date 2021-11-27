@@ -1,10 +1,12 @@
 import { Button } from "@mui/material";
 import React from "react";
+import { auth, provider, signInWithPopup } from "../../firebase";
 import "./login.scss";
 
 function Login() {
-  const onSignIn = () => {
-    //   TODO: IMP
+  const onSignIn = async () => {
+    const result = await signInWithPopup(auth, provider);
+    console.log("result:", result);
   };
   return (
     <div className="login">
