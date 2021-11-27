@@ -9,13 +9,10 @@ import React from "react";
 import "./sidebar.scss";
 import SidebarRow from "./SidebarRow/SidebarRow";
 
-const myImg =
-  "https://lh3.googleusercontent.com/ogw/ADea4I7ejJyjfu3ZDdmJvPP1sF20FtbtvpLb_d23s55S72U=s83-c-mo";
-
-function Sidebar() {
+function Sidebar({ profileSrc }) {
   return (
     <div className="sidebar">
-      <SidebarRow src={myImg} title="Anurag Arwalkar" />
+      <SidebarRow src={profileSrc} title="Anurag Arwalkar" />
       <SidebarRow
         title="COVID-19 Information Center"
         Icon={LocalHospitalIcon}

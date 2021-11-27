@@ -3,9 +3,11 @@ import PhotoLibraryIcon from "@mui/icons-material/PhotoLibrary";
 import VideocamIcon from "@mui/icons-material/Videocam";
 import { Avatar } from "@mui/material";
 import React, { useState } from "react";
+import { useStateValue } from "../../../store/StateProvider";
 import "./MessageSender.scss";
 
-function MessageSender({ userName = "Anurag Arwalkar" }) {
+function MessageSender() {
+  const [{ user }] = useStateValue();
   const [input, setInput] = useState("");
   const [imgUrl, setImgUrl] = useState("");
 
@@ -29,7 +31,7 @@ function MessageSender({ userName = "Anurag Arwalkar" }) {
   return (
     <div className="messageSender">
       <div className="messageSender__top">
-        <Avatar />
+        <Avatar src={user.photoURL} />
         <form className="messageSender__form">
           <input
             value={input}

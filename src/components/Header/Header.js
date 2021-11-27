@@ -12,9 +12,12 @@ import SupervisedUserCircleIcon from "@mui/icons-material/SupervisedUserCircle";
 import Avatar from "@mui/material/Avatar";
 import IconButton from "@mui/material/IconButton";
 import React from "react";
+import { useStateValue } from "../../store/StateProvider";
 import "./header.scss";
 
 function Header() {
+  const [{ user }] = useStateValue();
+
   return (
     <div className="header">
       <div className="header__left">
@@ -50,8 +53,8 @@ function Header() {
       </div>
       <div className="header__right">
         <div className="header__info">
-          <Avatar />
-          <h4>aarwalka</h4>
+          <Avatar src={user.photoURL} />
+          <h4>{user.displayName}</h4>
         </div>
         <IconButton>
           <AddIcon />
