@@ -37,44 +37,43 @@
     display: flex;
     justify-content: center;
     flex: 1;
+  }
 
-    &__option {
-      display: flex;
-      align-items: center;
-      padding: 0 30px;
-      cursor: pointer;
-      .MuiSvgIcon-root {
-        color: grey;
-      }
-
-      &--active {
-        .MuiSvgIcon-root {
-          @include bg-color;
-        }
-      }
+  &__option {
+    display: flex;
+    align-items: center;
+    padding: 0 30px;
+    cursor: pointer;
+    .MuiSvgIcon-root {
+      color: grey;
     }
 
-    &__option:hover {
-      background-color: #eff2f5;
-      border-radius: 10px;
-      border-bottom: none;
-
+    &--active {
       .MuiSvgIcon-root {
         @include bg-color;
       }
     }
   }
 
+  &__option:hover {
+    background-color: #eff2f5;
+    border-radius: 10px;
+    border-bottom: none;
+
+    .MuiSvgIcon-root {
+      @include bg-color;
+    }
+  }
+
   &__right {
     display: flex;
+  }
+  &__info {
+    display: flex;
+    align-items: center;
 
-    &__info {
-      display: flex;
-      align-items: center;
-
-      h4 {
-        margin-left: 10px;
-      }
+    h4 {
+      margin-left: 10px;
     }
   }
 }
