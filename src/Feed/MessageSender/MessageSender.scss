@@ -13,51 +13,51 @@
     display: flex;
     border-bottom: 1px solid #eff2ef;
     padding: 15px;
+  }
 
-    &__form {
+  &__form {
+    flex: 1;
+    display: flex;
+
+    input {
+      outline-width: 0;
+      border: none;
+      padding: 5px 20px;
+      margin: 0 10px;
+      background-color: $backgroundColor;
+      border-radius: 999px;
+    }
+
+    &--input {
       flex: 1;
-      display: flex;
+    }
 
-      input {
-        outline-width: 0;
-        border: none;
-        padding: 5px 20px;
-        margin: 0 10px;
-        background-color: $backgroundColor;
-        border-radius: 999px;
-      }
-
-      &--input {
-        flex: 1;
-      }
-
-      button {
-        display: none;
-      }
+    button {
+      display: none;
     }
   }
 
   &__bottom {
     display: flex;
     justify-content: space-between;
+  }
 
-    &__option {
-      display: flex;
-      align-items: center;
-      padding: 20px;
-      margin: 5px;
-      color: grey;
+  &__option {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    margin: 5px;
+    color: grey;
 
-      &:hover {
-        cursor: pointer;
-        border-radius: 20px;
-        background-color: $backgroundColor;
-      }
+    &:hover {
+      cursor: pointer;
+      border-radius: 20px;
+      background-color: $backgroundColor;
+    }
 
-      h3 {
-        font-size: medium;
-        margin-left: 10px;
-      }
+    h3 {
+      font-size: medium;
+      margin-left: 10px;
     }
   }
 }
