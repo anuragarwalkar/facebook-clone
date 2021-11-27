@@ -11,7 +11,7 @@ function Feed() {
       <MessageSender />
       <Post
         profilePic="https://scontent.fpnq7-3.fna.fbcdn.net/v/t1.6435-9/92463967_108509697478794_7376816041248161792_n.jpg?_nc_cat=101&cb=c578a115-c1c39920&ccb=1-5&_nc_sid=09cbfe&_nc_ohc=SFxxi7XzE_EAX_3qAxd&_nc_ht=scontent.fpnq7-3.fna&oh=634d135246c2f1c95efdbbb00aea35b5&oe=61C783E6"
-        message="Please support vegan"
+        message="Try Out..."
         timeStamp="This is demo"
         username="Million Dollar Vegan"
         image="https://scontent.fpnq7-4.fna.fbcdn.net/v/t1.6435-9/133982927_216433133353116_403887511979545190_n.jpg?_nc_cat=111&cb=c578a115-c1c39920&ccb=1-5&_nc_sid=8bfeb9&_nc_ohc=cVnHjgk-djIAX-uo875&_nc_ht=scontent.fpnq7-4.fna&oh=f26fffbfde47c85e2be1b1acd76e951d&oe=61C86214"
