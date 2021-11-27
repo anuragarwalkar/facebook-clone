@@ -1,3 +1,5 @@
+@import "./scss/base-colors.scss";
+
 * {
   margin: 0;
 }
@@ -7,4 +9,12 @@ body {
   font-family: "Segoe UI", "Roboto";
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.app {
+  background-color: $backgroundColor;
+  height: 100vh;
+  &__body {
+    display: flex;
+  }
 }

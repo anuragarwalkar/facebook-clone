@@ -4,8 +4,8 @@ import "./story.scss";
 
 function Story({ img, profileSrc, title }) {
   return (
-    <div className="story">
-      <Avatar src={profileSrc} />
+    <div className="story" style={{ backgroundImage: `url(${img})` }}>
+      <Avatar className="story__avatar" src={profileSrc} />
       <h4>{title}</h4>
     </div>
   );
