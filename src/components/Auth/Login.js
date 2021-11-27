@@ -1,12 +1,17 @@
 import { Button } from "@mui/material";
 import React from "react";
 import { auth, provider, signInWithPopup } from "../../firebase";
+import { actionTypes } from "../../store/reducer";
+import { useStateValue } from "../../store/StateProvider";
 import "./login.scss";
 
 function Login() {
+  // eslint-disable-next-line
+  const [_, dispatch] = useStateValue();
+
   const onSignIn = async () => {
     const result = await signInWithPopup(auth, provider);
-    console.log("result:", result);
+    dispatch({ type: actionTypes.SET_USER, user: result.user });
   };
   return (
     <div className="login">

@@ -1,6 +1,7 @@
-import { Feed, Widgets } from "@mui/icons-material";
 import React, { Fragment } from "react";
+import Feed from "../components/Feed/Feed";
 import Sidebar from "../components/Sidebar/Sidebar";
+import Widgets from "../components/Widget/Widgets";
 
 function HomeScreen() {
   return (
