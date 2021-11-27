@@ -1,14 +1,15 @@
 import { Fragment } from "react";
 import "./App.scss";
+import Login from "./components/Auth/Login";
 import Header from "./components/Header/Header";
 import HomeScreen from "./screen/HomeScreen";
 
 function App() {
-  const user = "aarwalka";
+  const user = null;
   return (
     <div className="app">
       {!user ? (
-        <h1>Login</h1>
+        <Login />
       ) : (
         <Fragment>
           <Header />
