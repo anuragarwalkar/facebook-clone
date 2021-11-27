@@ -1,18 +1,22 @@
+import { Fragment } from "react";
 import "./App.scss";
-import Feed from "./Feed/Feed";
 import Header from "./Header/Header";
-import Sidebar from "./Sidebar/Sidebar";
-import Widgets from "./Widget/Widgets";
+import HomeScreen from "./screen/HomeScreen";
 
 function App() {
+  const user = null;
   return (
     <div className="app">
-      <Header />
-      <div className="app__body">
-        <Sidebar />
-        <Feed />
-        <Widgets />
-      </div>
+      {!user ? (
+        <h1>Login</h1>
+      ) : (
+        <Fragment>
+          <Header />
+          <div className="app__body">
+            <HomeScreen />
+          </div>
+        </Fragment>
+      )}
     </div>
   );
 }
