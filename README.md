@@ -1,6 +1,6 @@
-## Facebook Clone With Oauth2 Firebase Login
+## Facebook Clone With OAuth 2 Login
 
-### Tech Stack
+### 🔥 Tech Stack
 ![React](https://img.shields.io/badge/react-%2361DAFB.svg?&style=for-the-badge&logo=react&logoColor=white)
 ![Redux](https://img.shields.io/badge/redux-%23593d88.svg?style=for-the-badge&logo=redux&logoColor=white)
 ![Firebase](https://img.shields.io/badge/firebase-%23FFCA28.svg?&style=for-the-badge&logo=firebase&logoColor=black)
