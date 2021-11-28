@@ -1,5 +1,10 @@
 import { initializeApp } from "firebase/app";
-import { getAuth, GoogleAuthProvider, signInWithPopup } from "firebase/auth";
+import {
+  getAuth,
+  getRedirectResult,
+  GoogleAuthProvider,
+  signInWithRedirect,
+} from "firebase/auth";
 import { getFirestore } from "firebase/firestore";
 
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
@@ -17,7 +22,7 @@ const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
 const auth = getAuth();
 const provider = new GoogleAuthProvider();
-export { provider, auth, signInWithPopup };
+export { provider, auth, signInWithRedirect, getRedirectResult };
 
 export default db;
 
