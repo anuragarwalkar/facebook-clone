@@ -1,4 +1,5 @@
-import { collection, getDocs } from "firebase/firestore/lite";
+// import { collection, getDocs } from "firebase/firestore";
+import { collection, onSnapshot, query } from "firebase/firestore";
 import React, { useEffect, useState } from "react";
 import db from "../../firebase";
 import "./feed.scss";
@@ -11,18 +12,20 @@ function Feed() {
 
   // Get a list of cities from your database
   async function getPosts(db) {
-    const postsCol = collection(db, "posts");
-    const postsSnap = await getDocs(postsCol);
-    const postsList = postsSnap.docs.map((doc) => ({
-      id: doc.id,
-      ...doc.data(),
-    }));
+    const q = query(collection(db, "posts"));
 
-    setPosts(postsList);
+    return onSnapshot(q, (querySnapshot) => {
+      const _postsList = [];
+      querySnapshot.forEach((doc) => {
+        _postsList.push({ id: doc.id, ...doc.data() });
+      });
+      setPosts(_postsList);
+    });
   }
 
   useEffect(() => {
-    getPosts(db);
+    const unSub = getPosts(db);
+    return unSub;
   }, []);
   return (
     <div className="feed">

@@ -1,6 +1,6 @@
 import { initializeApp } from "firebase/app";
 import { getAuth, GoogleAuthProvider, signInWithPopup } from "firebase/auth";
-import { getFirestore } from "firebase/firestore/lite";
+import { getFirestore } from "firebase/firestore";
 
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
@@ -20,3 +20,12 @@ const provider = new GoogleAuthProvider();
 export { provider, auth, signInWithPopup };
 
 export default db;
+
+// Get without snapshot
+// const postsCol = collection(db, "posts");
+// const postsSnap = await getDocs(postsCol);
+
+// const postsList = postsSnap.docs.map((doc) => ({
+//   id: doc.id,
+//   ...doc.data(),
+// }));
