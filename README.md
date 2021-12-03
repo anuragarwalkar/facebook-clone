@@ -1,4 +1,4 @@
-## Facebook Clone With OAuth 2 Login
+## Facebook Clone With OAuth 2
 
 ### 🔥 Tech Stack
 ![React](https://img.shields.io/badge/react-%2361DAFB.svg?&style=for-the-badge&logo=react&logoColor=white)
